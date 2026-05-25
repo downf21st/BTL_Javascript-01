@@ -14,8 +14,8 @@
     <aside class="sidebar" aria-label="Menu principale">
       <div class="sidebar__brand">
         <a href="" class="sidebar__logo" aria-label="Online dictionary — Home">  
-          <i class="ti ti-book" aria-hidden="true"></i>
-        </a>\
+          <i class="ti ti-book" aria-hidden="true"></i>          
+          <span>Online Dictionary</span></a>
       </div>
       <div class="sidebar__actions">
         <a href="" class="btn btn--outline btn--saved">
@@ -124,10 +124,10 @@
       <main class="entry" id="main-content">
 
         <nav class="entry__history" aria-label="Cronologia parole">
-          <button type="button" class="entry__history-btn" aria-label="Parola precedente" disabled>
+          <button type="button" class="entry__history-btn" >
             <i class="ti ti-chevron-left" aria-hidden="true"></i>
           </button>
-          <button type="button" class="entry__history-btn" aria-label="Parola successiva">
+          <button type="button" class="entry__history-btn">
             <i class="ti ti-chevron-right" aria-hidden="true"></i>
           </button>
         </nav>
@@ -138,9 +138,11 @@
           <div class="entry__actions" role="group">
             <button type="button" class="entry__icon-btn" aria-label="Copyboard">
               <i class="ti ti-copy" aria-hidden="true"></i>
+              <span class="entry__icon-label">Copyboard</span>
             </button>
             <button type="button" class="entry__icon-btn" aria-label="Bookmark">
               <i class="ti ti-bookmark"></i>
+              <span class="entry__icon-label">Saved</span>
             </button>
           </div>
         </header>
@@ -186,15 +188,15 @@
           </ul>
         </section>
 
-        <!-- Hành động cuối trang -->
+        
         <footer class="entry__footer">
           <button type="button" class="btn btn--primary">
             <i class="ti ti-refresh" aria-hidden="true"></i>
-            <span>Nuova parola</span>
+            <span>Refresh</span>
           </button>
           <button type="button" class="btn btn--ghost">
             <i class="ti ti-share" aria-hidden="true"></i>
-            <span>condividi</span>
+            <span>Share</span>
           </button>
         </footer>
 
@@ -211,34 +213,12 @@
           </p>
         </div>
 
-        <!-- NAV mạng xã hội -->
-        <nav class="site-footer__social" aria-label="Social media">
-          <ul class="site-footer__social-list" role="list">
-            <li>
-              <a href="https://linkedin.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://pinterest.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                <i class="ti ti-brand-pinterest" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                <i class="ti ti-brand-x" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://tiktok.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <i class="ti ti-brand-tiktok" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <a href="https://github.com/downf21st/BTL_Javascript-01" class="site-footer__github-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="ti ti-brand-github" aria-hidden="true"></i>
+          GitHub
+        </a>
 
       </footer>
-
     </div>
   </div>
 

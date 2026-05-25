@@ -85,12 +85,16 @@ body {
 .sidebar__logo {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
+  gap: 10px;
   color: var(--text);
   text-decoration: none;
   font-size: 26px;
+}
+
+.sidebar__logo span {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .sidebar__nav-title {
@@ -359,11 +363,46 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .entry__icon-btn:hover {
   background: var(--bg-active);
   color: var(--text);
+}
+
+.entry__icon-label {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background: var(--text);
+  color: var(--bg-card);
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.entry__icon-btn:hover .entry__icon-label {
+  opacity: 1;
+}
+
+.entry__icon-label::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--text);
 }
 
 .entry__phonetic {

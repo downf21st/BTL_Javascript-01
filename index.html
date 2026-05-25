@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online dictionary — tra từ." />
+  <title>Online dictionary</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> 
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Menu principale">
+      <div class="sidebar__brand">
+        <a href="" class="sidebar__logo" aria-label="Online dictionary — Home">  
+          <i class="ti ti-book" aria-hidden="true"></i>
+        </a>\
+      </div>
+      <div class="sidebar__actions">
+        <a href="" class="btn btn--outline btn--saved">
+          <i class="ti ti-bookmark" aria-hidden="true"></i>
+          <span>Saved Words</span>
+        </a>
+      </div>
+      <nav class="sidebar__nav" aria-labelledby="nav-lingue-title">
+        <h2 id="nav-lingue-title" class="sidebar__nav-title">Languages</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="nl">BRA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="en">VI - ENG</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a
+              href=""
+              class="sidebar__nav-link sidebar__nav-link--active"
+              hreflang="it"
+              aria-current="page"
+            >ENG - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="es">SPA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="pt">POR - VI</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="sidebar__nav sidebar__nav--secondary" aria-labelledby="nav-info-title">
+        <h2 id="nav-info-title" class="sidebar__nav-title">More information</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">FAQs</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">Make a donation</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">Careers</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">About us</a>
+          </li>
+        </ul>
+      </nav>
+   </aside>
+    <div class="content">
+      <header class="site-header">
+        <form class="site-header__search" role="search" action="#" method="get">
+          <label for="search-query" class="visually-hidden">Search</label>
+          <input
+            id="search-query"
+            class="site-header__search-input"
+            type="search"
+            name="q"
+            placeholder="Search for a word..."
+            autocomplete="off"
+          />
+          <button type="submit" class="site-header__search-btn">
+            <i class="ti ti-search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <div class="site-header__tools">
+          <nav class="site-header__lang-nav">
+            <button
+              type="button"
+              class="site-header__lang-btn"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              id="ui-lang-toggle"
+            >
+              <span>Vietnamese (VN)</span>
+              <i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+
+            <ul class="site-header__lang-menu is-hidden" role="listbox" aria-labelledby="ui-lang-toggle">
+              <li role="option"><button type="button">Vietnamese (VN)</button></li>
+              <li role="option"><button type="button">English (EN)</button></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__profile">
+            <div class="site-header__profile-text">
+              <p class="site-header__username">BTL_JS-01</p>
+              <p class="site-header__stats">downf.21st</p>
+            </div>
+            <img
+              class="site-header__avatar"
+              src="https://api.dicebear.com/7.x/avataaars/svg?seed=Lock_ItSea"
+              width="40"
+              height="40"
+              alt="Avatar"
+            />
+            <button type="button" class="site-header__menu-btn">
+              <i class="ti ti-menu-2" aria-hidden="true"></i>
+            </button>
+          </div>
+
+        </div>
+      </header>
+
+      <main class="entry" id="main-content">
+
+        <nav class="entry__history" aria-label="Cronologia parole">
+          <button type="button" class="entry__history-btn" aria-label="Parola precedente" disabled>
+            <i class="ti ti-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="entry__history-btn" aria-label="Parola successiva">
+            <i class="ti ti-chevron-right" aria-hidden="true"></i>
+          </button>
+        </nav>
+
+       
+        <header class="entry__header">
+          <h1 class="entry__word" id="entry__word">Hello</h1>
+          <div class="entry__actions" role="group">
+            <button type="button" class="entry__icon-btn" aria-label="Copyboard">
+              <i class="ti ti-copy" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="entry__icon-btn" aria-label="Bookmark">
+              <i class="ti ti-bookmark"></i>
+            </button>
+          </div>
+        </header>
+
+        
+        <p class="entry__phonetic">
+          <span class="visually-hidden">Pronuncia:</span>
+           /heˈləʊ/
+        </p>
+
+
+        <section class="entry__definition" aria-labelledby="def-title">
+          <h2 id="def-title" class="visually-hidden">Define</h2>
+          <p id="word-define">
+            Xin chào, biểu lộ sự ngạc nhiên
+          </p>
+        </section>
+
+        
+        <section class="entry__section" aria-labelledby="examples-title">
+          <h2 id="examples-title" class="entry__section-title">Examples</h2>
+          <ul class="entry__examples">
+            <li>
+              <strong>Hello</strong>! How are you doing today?
+            </li>
+            <li>
+              She said <strong>hello</strong> to everyone at the party.
+            </li>
+            <li>
+              <strong>Hello</strong>, nice to meet you!
+            </li>
+          </ul>
+        </section>
+
+        
+        <section class="entry__section" aria-labelledby="synonyms-title">
+          <h2 id="synonyms-title" class="entry__section-title">Synonyms</h2>
+          <ul class="entry__synonyms" role="list">
+            <li><a href="" class="tag"></a></li>
+            <li><a href="" class="tag"></a></li>
+            <li><a href="" class="tag"></a></li>
+            <li><a href="" class="tag"></a></li>
+          </ul>
+        </section>
+
+        <!-- Hành động cuối trang -->
+        <footer class="entry__footer">
+          <button type="button" class="btn btn--primary">
+            <i class="ti ti-refresh" aria-hidden="true"></i>
+            <span>Nuova parola</span>
+          </button>
+          <button type="button" class="btn btn--ghost">
+            <i class="ti ti-share" aria-hidden="true"></i>
+            <span>condividi</span>
+          </button>
+        </footer>
+
+      </main>
+
+    
+      <footer class="site-footer">
+
+        <div class="site-footer__legal">
+          <p>
+            <small>&copy; 2026 Dictionary. All rights reserved.</small>
+            <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+            <a href="#info">Info</a>
+          </p>
+        </div>
+
+        <!-- NAV mạng xã hội -->
+        <nav class="site-footer__social" aria-label="Social media">
+          <ul class="site-footer__social-list" role="list">
+            <li>
+              <a href="https://linkedin.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://pinterest.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                <i class="ti ti-brand-pinterest" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <i class="ti ti-brand-x" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <i class="ti ti-brand-tiktok" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </footer>
+
+    </div>
+  </div>
+
+</body>
+</html>

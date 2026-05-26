@@ -299,10 +299,10 @@ body {
 /* ── MAIN / Entry ─────────────────────────────────────────── */
 .entry {
   flex: 1;
-  padding: 24px 32px 32px;
+  padding: 32px 48px 48px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .entry__history {
@@ -339,10 +339,11 @@ body {
 }
 
 .entry__word {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  margin-bottom: 8px;
 }
 
 .entry__actions {
@@ -406,24 +407,28 @@ body {
 }
 
 .entry__phonetic {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--text-muted);
   font-style: italic;
+  margin-bottom: 12px;
 }
 
 .entry__section-title {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-muted);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  margin-top: 16px;
 }
 
 .entry__examples {
-  padding-left: 20px;
+  padding-left: 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   color: #333;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .entry__examples strong {

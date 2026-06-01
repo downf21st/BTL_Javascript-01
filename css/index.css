@@ -1,4 +1,3 @@
-/* ── Reset & base ─────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -53,7 +52,6 @@ body {
   display: none !important;
 }
 
-/* ── App shell — full viewport ────────────────────────────── */
 .app-shell {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -72,7 +70,6 @@ body {
   min-height: 100dvh;
 }
 
-/* ── ASIDE / Sidebar ──────────────────────────────────────── */
 .sidebar {
   background: var(--bg-sidebar);
   padding: 28px 20px;
@@ -187,7 +184,7 @@ body {
   color: var(--text);
 }
 
-/* ── HEADER ───────────────────────────────────────────────── */
+
 .site-header {
   display: flex;
   align-items: center;
@@ -301,7 +298,6 @@ body {
   background: var(--bg-active);
 }
 
-/* ── MAIN / Entry ─────────────────────────────────────────── */
 .entry {
   flex: 1;
   padding: 32px 48px 48px;
@@ -472,7 +468,6 @@ body {
   gap: 12px;
 }
 
-/* ── FOOTER ───────────────────────────────────────────────── */
 .site-footer {
   display: flex;
   align-items: center;
@@ -521,7 +516,6 @@ body {
   background: var(--bg-active);
 }
 
-/* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -553,3 +547,4 @@ body {
     font-size: 2rem;
   }
 }
+  

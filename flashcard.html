@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Từ Vựng qua Flash Card</title>
+    <!-- Nhúng file CSS riêng của bạn -->
+    <link rel="stylesheet" href="./flashcard.css">
+</head>
+<body>
+
+    <div class="flashcard-container">
+        <h1>Thẻ Ghi Nhớ Từ Vựng</h1>
+        
+        <!-- Khung chứa chiếc thẻ có 2 mặt -->
+        <div class="flashcard" id="flashcard">
+            <!-- Mặt trước: Tiếng Anh -->
+            <div class="card-face card-front">
+                <p class="word" id="word-eng">Hello</p>
+                <p class="pronunciation" id="word-ipa">/həˈloʊ/</p>
+                <span class="hint">Bấm vào để xem nghĩa</span>
+            </div>
+            <!-- Mặt sau: Tiếng Việt -->
+            <div class="card-face card-back">
+                <p class="meaning" id="word-vie">Xin chào</p>
+                <span class="hint">Bấm vào để quay lại</span>
+            </div>
+        </div>
+
+        <!-- Các nút điều hướng -->
+        <div class="navigation">
+            <button id="prev-btn">◀ Trước</button>
+            <span id="card-progress">1 / 3</span>
+            <button id="next-btn">Tiếp ▶</button>
+        </div>
+    </div>
+
+    <!-- Nhúng file JS riêng của bạn ở cuối body -->
+    <script src="./flashcard.js"></script>
+</body>
+</html>

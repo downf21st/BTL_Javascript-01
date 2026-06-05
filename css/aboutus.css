@@ -1,0 +1,47 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.about-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 400px;
+}
+
+h1 { color: #333; margin-top: 0; }
+p { color: #555; font-size: 14px; }
+
+#team-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 25px 0;
+}
+
+#team-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    color: #444;
+    font-weight: 500;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover { background-color: #45a049; }

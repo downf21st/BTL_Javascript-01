@@ -1,41 +1,160 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Từ Vựng qua Flash Card</title>
-    <!-- Nhúng file CSS riêng của bạn -->
-    <link rel="stylesheet" href="./flashcard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online dictionary — tra từ." />
+  <title>Flashcard - Online dictionary</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> 
+  <link rel="stylesheet" href="css/index.css" />
+  
+  <link rel="stylesheet" href="css/flashcard.css" />
+  
+  <link rel="icon" href="assets\Book.jpg" type="image/icon" />
 </head>
-<body>
 
-    <div class="flashcard-container">
-        <h1>Thẻ Ghi Nhớ Từ Vựng</h1>
+<body class="flashcard-page">
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Menu principale">
+      <div class="sidebar__brand">
+        <a href="index.html" class="sidebar__logo" aria-label="Online dictionary — Home">  
+          <i class="ti ti-book" aria-hidden="true"></i>          
+          <span>Online Dictionary</span></a>
+      </div>
+      <div class="sidebar__actions">
+        <a href="" class="btn btn--outline btn--saved">
+          <i class="ti ti-bookmark" aria-hidden="true"></i>
+          <span>Saved Words</span>
+        </a>
+        <a href="flashcard.html" class="btn btn--outline">
+          <i class="ti ti-cards" aria-hidden="true"></i>
+          <span>Flash Card</span>
+        </a>
+      </div>
+      <nav class="sidebar__nav" aria-labelledby="nav-lingue-title">
+        <h2 id="nav-lingue-title" class="sidebar__nav-title">Languages</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="nl">BRA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="en">VI - ENG</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link sidebar__nav-link--active" hreflang="it" aria-current="page">ENG - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="es">SPA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="pt">POR - VI</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="sidebar__nav sidebar__nav--secondary" aria-labelledby="nav-info-title">
+        <h2 id="nav-info-title" class="sidebar__nav-title">More information</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">FAQs</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">Make a donation</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">Careers</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">About us</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <header class="site-header">
+        <form class="site-header__search" role="search" action="#" method="get">
+          <label for="search-query" class="visually-hidden">Search</label>
+          <input
+            id="search-query"
+            class="site-header__search-input"
+            type="search"
+            name="q"
+            placeholder="Search for a word..."
+            autocomplete="off"
+          />
+          <button type="submit" class="site-header__search-btn">
+            <i class="ti ti-search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <div class="site-header__tools">
+          <nav class="site-header__lang-nav">
+            <button type="button" class="site-header__lang-btn" aria-haspopup="listbox" aria-expanded="false" id="ui-lang-toggle">
+              <span>Vietnamese (VN)</span>
+              <i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <ul class="site-header__lang-menu is-hidden" role="listbox">
+              <li role="option"><button type="button">Vietnamese (VN)</button></li>
+              <li role="option"><button type="button">English (EN)</button></li>
+            </ul>
+          </nav>
+          <div class="site-header__profile">
+            <div class="site-header__profile-text">
+              <p class="site-header__username">BTL_JS-01</p>
+              <p class="site-header__stats">downf.21st</p>
+            </div>
+            <img class="site-header__avatar" src="assets\avatar.jpg" width="40" height="40" alt="Avatar" />
+            <button type="button" class="site-header__menu-btn">
+              <i class="ti ti-menu-2" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="entry" id="main-content">
         
-        <!-- Khung chứa chiếc thẻ có 2 mặt -->
-        <div class="flashcard" id="flashcard">
-            <!-- Mặt trước: Tiếng Anh -->
-            <div class="card-face card-front">
-                <p class="word" id="word-eng">Hello</p>
-                <p class="pronunciation" id="word-ipa">/həˈloʊ/</p>
-                <span class="hint">Bấm vào để xem nghĩa</span>
+        <div class="flashcard-container">
+          <h1>Thẻ Ghi Nhớ Từ Vựng</h1>
+          
+          <div class="flashcard">
+            <div class="card-inner"> 
+              <div class="card-face card-front">
+                <h2 class="word" id="flashcard-word">Hello</h2>
+                <p class="pronunciation" id="flashcard-pron">/heˈləʊ/</p>
+                <p class="hint">(Bấm vào thẻ để xem nghĩa)</p>
+              </div>
+              <div class="card-face card-back">
+                <p class="meaning" id="flashcard-meaning">Xin chào, biểu lộ sự ngạc nhiên</p>
+              </div>
             </div>
-            <!-- Mặt sau: Tiếng Việt -->
-            <div class="card-face card-back">
-                <p class="meaning" id="word-vie">Xin chào</p>
-                <span class="hint">Bấm vào để quay lại</span>
-            </div>
+          </div>
+
+          <div class="navigation">
+            <button id="prev-btn" disabled>← Trước</button>
+            <span id="card-progress">1 / 5</span>
+            <button id="next-btn">Sau →</button>
+          </div>
         </div>
 
-        <!-- Các nút điều hướng -->
-        <div class="navigation">
-            <button id="prev-btn">◀ Trước</button>
-            <span id="card-progress">1 / 3</span>
-            <button id="next-btn">Tiếp ▶</button>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__legal">
+          <p>
+            <small>&copy; 2026 Dictionary. All rights reserved.</small>
+            <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+            <a href="#info">Info</a>
+          </p>
         </div>
+        <a href="https://github.com/downf21st/BTL_Javascript-01" class="site-footer__github-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="ti ti-brand-github" aria-hidden="true"></i>
+          GitHub
+        </a>
+      </footer>
+
     </div>
+  </div>
 
-    <!-- Nhúng file JS riêng của bạn ở cuối body -->
-    <script src="./flashcard.js"></script>
+  <script src="js/flashcard.js"></script>
 </body>
 </html>

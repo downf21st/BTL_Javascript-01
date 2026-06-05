@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> 
   <link rel="stylesheet" href="css/index.css" />
   <link rel="icon" href="assets\Book.jpg" type="image/icon" />
+  <link rel="stylesheet" href="css/searchQuery.css" />
 </head>
 
 <body>
@@ -84,7 +85,7 @@
             placeholder="Search for a word..."
             autocomplete="off"
           />
-          <button type="submit" class="site-header__search-btn">
+          <button type="submit" class="site-header__search-btn" onclick="handleSearch()">
             <i class="ti ti-search" aria-hidden="true"></i>
           </button>
         </form>
@@ -227,6 +228,6 @@
       </footer>
     </div>
   </div>
-
+<script src="js/index.js"></script>
 </body>
 </html>

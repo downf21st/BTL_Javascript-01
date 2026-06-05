@@ -80,16 +80,27 @@ if (bookmarkBtn) {
 }
 
 if (copyBtn) {
+  const label = copyBtn.querySelector('.entry__icon-label');
+  const originalText = label ? label.textContent : '';
+
+  let timeoutId;
+
   copyBtn.addEventListener('click', () => {
     const word = wordEl.textContent.trim();
+    
     navigator.clipboard.writeText(word).then(() => {
-      const label = copyBtn.querySelector('.entry__icon-label');
-      const original = label.textContent;
-      label.textContent = 'Đã copy!';
-      setTimeout(() => { label.textContent = original; }, 1500);
+      if (label) {
+        label.textContent = 'Đã copy!';
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => { 
+          label.textContent = originalText; 
+        }, 1500);
+      }
+    }).catch(err => {
+      console.error('Lỗi khi copy: ', err);
     });
   });
-} 
+}
 async function fetchWord(word) {
   const url = `https://dict.minhqnd.com/api/v1/lookup?word=${encodeURIComponent(word)}`;
   try {

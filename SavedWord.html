@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saved Words - Online Dictionary</title>
+  <link rel="stylesheet" href="saved-words.css" />
+</head>
+<body>
+ 
+  <div class="app-layout">
+ 
+    <!-- ========== SIDEBAR TRÁI ========== -->
+    <aside class="sidebar">
+ 
+      <div class="sidebar-logo">
+        <span class="sidebar-logo-icon">&#128214;</span>
+        Online Dictionary
+      </div>
+ 
+      <!-- Nút điều hướng chính -->
+      <button class="sidebar-btn" onclick="window.location.href='saved-words-full.html'">
+        &#128278; Saved Words
+      </button>
+      <button class="sidebar-btn" onclick="window.location.href='flashcard.html'">
+        &#127183; Flash Card
+      </button>
+ 
+      <!-- Danh sách ngôn ngữ -->
+      <div class="sidebar-section">Languages</div>
+      <div class="sidebar-lang">BRA - VI</div>
+      <div class="sidebar-lang">VI - ENG</div>
+      <div class="sidebar-lang active">ENG - VI</div>
+      <div class="sidebar-lang">SPA - VI</div>
+      <div class="sidebar-lang">POR - VI</div>
+ 
+      <!-- Footer sidebar -->
+      <div class="sidebar-bottom">
+        <div class="sidebar-section" style="padding-top: 0;">More information</div>
+        <div class="sidebar-bottom-link">FAQs</div>
+        <div class="sidebar-bottom-link">Make a donation</div>
+        <div class="sidebar-bottom-link">Careers</div>
+        <div class="sidebar-bottom-link">About us</div>
+      </div>
+ 
+    </aside>
+ 
+    <!-- ========== PHẦN PHẢI ========== -->
+    <div class="main-wrapper">
+ 
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-search-wrap">
+          <input
+            type="text"
+            class="topbar-search-input"
+            placeholder="Search for a word..."
+          />
+          <span class="topbar-search-icon">&#128269;</span>
+        </div>
+        <div class="topbar-right">
+          <span class="lang-select">Vietnamese (VN) &#9660;</span>
+          <span class="topbar-username">RTL_JS-01</span>
+          <div class="topbar-avatar">&#128100;</div>
+          <span class="topbar-menu">&#9776;</span>
+        </div>
+      </header>
+ 
+      <!-- NỘI DUNG SAVED WORDS -->
+      <main class="saved-words-page">
+ 
+        <h2 class="sw-title">Saved Words</h2>
+ 
+        <!-- Ô tìm kiếm -->
+        <div class="sw-search-wrap">
+          <input
+            type="text"
+            class="sw-search-input"
+            id="swSearchInput"
+            placeholder="Search in saved words..."
+            oninput="filterSavedWords()"
+          />
+          <span class="sw-search-icon">&#128269;</span>
+        </div>
+ 
+        <!-- Thông báo trống -->
+        <div class="sw-empty-msg" id="swEmptyMsg">
+          No saved words yet. Search for a word and click the bookmark icon to save it!
+        </div>
+ 
+        <!-- Danh sách từ đã lưu -->
+        <ul class="sw-list" id="swList"></ul>
+ 
+      </main>
+ 
+      <!-- FOOTER -->
+      <footer class="bottom-bar">
+        <span class="bottom-copy">&#169;2026 Dictoney. All rights reserved. &middot; Info</span>
+        <div class="bottom-actions">
+          <button class="btn-small">&#8635; Refresh</button>
+          <button class="btn-small">&#8679; Share</button>
+        </div>
+      </footer>
+ 
+    </div>
+  </div>
+ 
+  <script src="saved-words.js"></script>
+ 
+</body>
+</html>

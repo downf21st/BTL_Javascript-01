@@ -548,3 +548,60 @@ body {
   }
 }
   
+/* ── Meanings ────────────────────────────────────────────────── */
+.meaning-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.meaning-item:last-child {
+  border-bottom: none;
+}
+.meaning-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.pos-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--bg-active);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+.meaning-source {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.meaning-def {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.meaning-example {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 4px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+}
+
+/* ── Phonetic regions ────────────────────────────────────────── */
+.phonetic__region {
+  font-size: 11px;
+  font-style: normal;
+  color: var(--text-muted);
+  background: var(--bg-active);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 4px;
+  vertical-align: middle;
+}

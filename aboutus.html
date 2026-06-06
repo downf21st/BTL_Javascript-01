@@ -4,28 +4,161 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Online dictionary — tra từ." />
-  <title>Online dictionary</title>
+  <title>Online dictionary - About Us</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> 
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/aboutus.css">
+  <link rel="stylesheet" href="css/aboutus.css" />
   <link rel="icon" href="assets\Book.jpg" type="image/icon" />
   <link rel="stylesheet" href="css/searchQuery.css" />
 </head>
 
 <body>
-  <div class="about-wrapper">
-    <div class="about-container">
-        <h1>Về Chúng Tôi</h1>
-        <p>Dự án Từ điển trực tuyến được phát triển bởi nhóm sinh viên:</p>
-        <ul id="team-list">
-            <li>Nguyễn Đức Đông - B25DCCC277</li>
-            <li>Nguyễn Hải Nam - B25DCCC151</li>
-            <li>Nguyễn Anh Tú - B25DCCC259</li>
-            <li>Vũ Đình Khánh Toàn - B25DCCC228</li>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Menu principale">
+      <div class="sidebar__brand">
+        <a href="" class="sidebar__logo" aria-label="Online dictionary — Home">  
+          <i class="ti ti-book" aria-hidden="true"></i>          
+          <span>Online Dictionary</span></a>
+      </div>
+      <div class="sidebar__actions">
+        <a href="" class="btn btn--outline btn--saved">
+          <i class="ti ti-bookmark" aria-hidden="true"></i>
+          <span>Saved Words</span>
+        </a>
+        <a href="" class="btn btn--outline">
+          <i class="ti ti-cards" aria-hidden="true"></i>
+          <span>Flash Card</span>
+        </a>
+      </div>
+      <nav class="sidebar__nav" aria-labelledby="nav-lingue-title">
+        <h2 id="nav-lingue-title" class="sidebar__nav-title">Languages</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="nl">BRA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="en">VI - ENG</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a
+              href=""
+              class="sidebar__nav-link sidebar__nav-link--active"
+              hreflang="it"
+              aria-current="page"
+            >ENG - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="es">SPA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="pt">POR - VI</a>
+          </li>
         </ul>
-        <button id="greet-btn">Gửi lời chào</button>
+      </nav>
+      <nav class="sidebar__nav sidebar__nav--secondary" aria-labelledby="nav-info-title">
+        <h2 id="nav-info-title" class="sidebar__nav-title">More information</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">FAQs</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">Make a donation</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">Careers</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link">About us</a>
+          </li>
+        </ul>
+      </nav>
+   </aside>
+    <div class="content">
+      <header class="site-header">
+        <form class="site-header__search" role="search" action="#" method="get">
+          <label for="search-query" class="visually-hidden">Search</label>
+          <input
+            id="search-query"
+            class="site-header__search-input"
+            type="search"
+            name="q"
+            placeholder="Search for a word..."
+            autocomplete="off"
+          />
+          <button type="submit" class="site-header__search-btn" onclick="handleSearch()">
+            <i class="ti ti-search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <div class="site-header__tools">
+          <nav class="site-header__lang-nav">
+            <button
+              type="button"
+              class="site-header__lang-btn"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              id="ui-lang-toggle"
+            >
+              <span>Vietnamese (VN)</span>
+              <i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+
+            <ul class="site-header__lang-menu is-hidden" role="listbox">
+              <li role="option"><button type="button">Vietnamese (VN)</button></li>
+              <li role="option"><button type="button">English (EN)</button></li>
+            </ul>
+          </nav>
+
+          <div class="site-header__profile">
+            <div class="site-header__profile-text">
+              <p class="site-header__username">BTL_JS-01</p>
+              <p class="site-header__stats">downf.21st</p>
+            </div>
+            <img
+              class="site-header__avatar"
+              src="assets\avatar.jpg"
+              width="40"
+              height="40"
+              alt="Avatar"
+            />
+            <button type="button" class="site-header__menu-btn">
+              <i class="ti ti-menu-2" aria-hidden="true"></i>
+            </button>
+          </div>
+
+        </div>
+      </header>
+
+      <main class="entry" id="main-content">
+        <div class="about-wrapper">
+            <div class="about-container">
+                <h1>Về Chúng Tôi</h1>
+                <p>Dự án Từ điển trực tuyến được phát triển bởi nhóm sinh viên:</p>
+                <ul id="team-list">
+                    <li>Nguyễn Đức Đông - B25DCCC277</li>
+                    <li>Nguyễn Hải Nam - B25DCCC151</li>
+                    <li>Nguyễn Anh Tú - B25DCCC259</li>
+                    <li>Vũ Đình Khánh Toàn - B25DCCC228</li>
+                </ul>
+                <button id="greet-btn">Gửi lời chào</button>
+            </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__legal">
+          <p>
+            <small>&copy; 2026 Dictionary. All rights reserved.</small>
+            <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+            <a href="#info">Info</a>
+          </p>
+        </div>
+        <a href="https://github.com/downf21st/BTL_Javascript-01" class="site-footer__github-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="ti ti-brand-github" aria-hidden="true"></i>
+          GitHub
+        </a>
+      </footer>
     </div>
-</div>
+  </div>
 <script src="js/aboutus.js"></script>
 </body>
 </html>

@@ -52,7 +52,9 @@ function toggleBookmark(wordData) {
   const saved = getSavedWords();
   const idx   = saved.findIndex(item => item.eng === wordData.eng);
   if (idx === -1) {
-    saved.push(wordData);
+    // Thêm savedAt khi lưu từ
+    const dataToSave = Object.assign({}, wordData, { savedAt: Date.now() });
+    saved.push(dataToSave);
   } else {
     saved.splice(idx, 1);
   }
@@ -282,6 +284,23 @@ if (refreshBtn) {
     if (current) renderEntry(current);
   });
 }
+
+function checkAndLoadLookupWord() {
+  const lookupData = sessionStorage.getItem('lookupWordData');
+  if (lookupData) {
+    try {
+      const wordData = JSON.parse(lookupData);
+      searchInput.value = wordData.eng;
+      handleSearch();
+     sessionStorage.removeItem('lookupWordData');
+    } catch (e) {
+      console.error('Lỗi khi parse lookup data:', e);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', checkAndLoadLookupWord);
+checkAndLoadLookupWord();
 
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

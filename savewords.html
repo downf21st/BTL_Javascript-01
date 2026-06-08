@@ -13,8 +13,6 @@
 
 <body>
   <div class="app-shell">
-
-    <!-- SIDEBAR — giữ nguyên từ index.html -->
     <aside class="sidebar" aria-label="Menu principale">
       <div class="sidebar__brand">
         <a href="index.html" class="sidebar__logo" aria-label="Online dictionary — Home">
@@ -64,8 +62,6 @@
     </aside>
 
     <div class="content">
-
-      <!-- HEADER — giữ nguyên từ index.html -->
       <header class="site-header">
         <form class="site-header__search" role="search" action="#" method="get">
           <label for="search-query" class="visually-hidden">Search</label>
@@ -106,17 +102,12 @@
         </div>
       </header>
 
-      <!-- ===== MAIN: SAVED WORDS ===== -->
       <main class="saved-page" id="main-content">
-
-        <!-- Tiêu đề -->
         <h1 class="saved-page__title">
           <i class="ti ti-bookmark-filled" aria-hidden="true"></i>
           Saved Words
           <span class="saved-page__count" id="word-count"></span>
         </h1>
-
-        <!-- Toolbar: lọc + sắp xếp + xóa tất cả -->
         <div class="saved-toolbar">
           <div class="saved-toolbar__search">
             <i class="ti ti-search" aria-hidden="true"></i>
@@ -139,26 +130,15 @@
             Clear all
           </button>
         </div>
-
-        <!-- Grid từ đã lưu — JS render vào đây -->
         <div class="saved-grid" id="saved-grid" role="list" aria-label="Saved words list"></div>
-
-        <!-- Trạng thái rỗng -->
         <div class="saved-empty" id="saved-empty" role="status" aria-live="polite">
           <i class="ti ti-bookmarks-off" aria-hidden="true"></i>
           <p class="saved-empty__title">No saved words yet</p>
-          <p>Tra t&#7915; v&agrave; nh&#7845;n <strong>Bookmark</strong> &#273;&#7875; l&#432;u l&#7841;i!</p>
-          <a href="index.html">&#8592; Tra t&#7915; ngay</a>
-          <!-- Nút reset demo: chỉ dùng khi dev/test, xóa đi khi release -->
-          <button onclick="resetSavedWords()" class="btn--reset-demo">
-            <i class="ti ti-refresh" aria-hidden="true"></i>
-            Load demo data
-          </button>
+          <p>Tra từ và nhấn <strong>Bookmark</strong> để lưu lại!</p>
+          <a href="index.html">← Tra từ ngay</a>
         </div>
 
       </main>
-
-      <!-- FOOTER — giữ nguyên từ index.html -->
       <footer class="site-footer">
         <div class="site-footer__legal">
           <p>
@@ -175,11 +155,7 @@
       </footer>
     </div>
   </div>
-
-  <!-- Toast thông báo -->
   <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
-
-  <!-- Modal xác nhận xóa tất cả -->
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal">
       <div class="modal__icon"><i class="ti ti-trash" aria-hidden="true"></i></div>

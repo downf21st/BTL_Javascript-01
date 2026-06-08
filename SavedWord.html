@@ -2,110 +2,196 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saved Words - Online Dictionary</title>
-  <link rel="stylesheet" href="saved-words.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online dictionary — saved words." />
+  <title>Saved Words — Online Dictionary</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/saved-words.css" />
+  <link rel="icon" href="assets/Book.jpg" type="image/icon" />
 </head>
+
 <body>
- 
-  <div class="app-layout">
- 
-    <!-- ========== SIDEBAR TRÁI ========== -->
-    <aside class="sidebar">
- 
-      <div class="sidebar-logo">
-        <span class="sidebar-logo-icon">&#128214;</span>
-        Online Dictionary
+  <div class="app-shell">
+
+    <!-- SIDEBAR — giữ nguyên từ index.html -->
+    <aside class="sidebar" aria-label="Menu principale">
+      <div class="sidebar__brand">
+        <a href="index.html" class="sidebar__logo" aria-label="Online dictionary — Home">
+          <i class="ti ti-book" aria-hidden="true"></i>
+          <span>Online Dictionary</span>
+        </a>
       </div>
- 
-      <!-- Nút điều hướng chính -->
-      <button class="sidebar-btn" onclick="window.location.href='saved-words-full.html'">
-        &#128278; Saved Words
-      </button>
-      <button class="sidebar-btn" onclick="window.location.href='flashcard.html'">
-        &#127183; Flash Card
-      </button>
- 
-      <!-- Danh sách ngôn ngữ -->
-      <div class="sidebar-section">Languages</div>
-      <div class="sidebar-lang">BRA - VI</div>
-      <div class="sidebar-lang">VI - ENG</div>
-      <div class="sidebar-lang active">ENG - VI</div>
-      <div class="sidebar-lang">SPA - VI</div>
-      <div class="sidebar-lang">POR - VI</div>
- 
-      <!-- Footer sidebar -->
-      <div class="sidebar-bottom">
-        <div class="sidebar-section" style="padding-top: 0;">More information</div>
-        <div class="sidebar-bottom-link">FAQs</div>
-        <div class="sidebar-bottom-link">Make a donation</div>
-        <div class="sidebar-bottom-link">Careers</div>
-        <div class="sidebar-bottom-link">About us</div>
+      <div class="sidebar__actions">
+        <a href="saved-words.html" class="btn btn--outline btn--saved">
+          <i class="ti ti-bookmark" aria-hidden="true"></i>
+          <span>Saved Words</span>
+        </a>
+        <a href="" class="btn btn--outline">
+          <i class="ti ti-cards" aria-hidden="true"></i>
+          <span>Flash Card</span>
+        </a>
       </div>
- 
+      <nav class="sidebar__nav" aria-labelledby="nav-lingue-title">
+        <h2 id="nav-lingue-title" class="sidebar__nav-title">Languages</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="nl">BRA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="en">VI - ENG</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link sidebar__nav-link--active" hreflang="it" aria-current="page">ENG - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="es">SPA - VI</a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="" class="sidebar__nav-link" hreflang="pt">POR - VI</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="sidebar__nav sidebar__nav--secondary" aria-labelledby="nav-info-title">
+        <h2 id="nav-info-title" class="sidebar__nav-title">More information</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">FAQs</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">Make a donation</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">Careers</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">About us</a></li>
+        </ul>
+      </nav>
     </aside>
- 
-    <!-- ========== PHẦN PHẢI ========== -->
-    <div class="main-wrapper">
- 
-      <!-- TOPBAR -->
-      <header class="topbar">
-        <div class="topbar-search-wrap">
+
+    <div class="content">
+
+      <!-- HEADER — giữ nguyên từ index.html -->
+      <header class="site-header">
+        <form class="site-header__search" role="search" action="#" method="get">
+          <label for="search-query" class="visually-hidden">Search</label>
           <input
-            type="text"
-            class="topbar-search-input"
+            id="search-query"
+            class="site-header__search-input"
+            type="search"
+            name="q"
             placeholder="Search for a word..."
+            autocomplete="off"
           />
-          <span class="topbar-search-icon">&#128269;</span>
-        </div>
-        <div class="topbar-right">
-          <span class="lang-select">Vietnamese (VN) &#9660;</span>
-          <span class="topbar-username">RTL_JS-01</span>
-          <div class="topbar-avatar">&#128100;</div>
-          <span class="topbar-menu">&#9776;</span>
+          <button type="submit" class="site-header__search-btn">
+            <i class="ti ti-search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <div class="site-header__tools">
+          <nav class="site-header__lang-nav">
+            <button type="button" class="site-header__lang-btn"
+              aria-haspopup="listbox" aria-expanded="false" id="ui-lang-toggle">
+              <span>Vietnamese (VN)</span>
+              <i class="ti ti-chevron-down" aria-hidden="true"></i>
+            </button>
+            <ul class="site-header__lang-menu is-hidden" role="listbox">
+              <li role="option"><button type="button">Vietnamese (VN)</button></li>
+              <li role="option"><button type="button">English (EN)</button></li>
+            </ul>
+          </nav>
+          <div class="site-header__profile">
+            <div class="site-header__profile-text">
+              <p class="site-header__username">BTL_JS-01</p>
+              <p class="site-header__stats">downf.21st</p>
+            </div>
+            <img class="site-header__avatar" src="assets/avatar.jpg" width="40" height="40" alt="Avatar" />
+            <button type="button" class="site-header__menu-btn">
+              <i class="ti ti-menu-2" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
       </header>
- 
-      <!-- NỘI DUNG SAVED WORDS -->
-      <main class="saved-words-page">
- 
-        <h2 class="sw-title">Saved Words</h2>
- 
-        <!-- Ô tìm kiếm -->
-        <div class="sw-search-wrap">
-          <input
-            type="text"
-            class="sw-search-input"
-            id="swSearchInput"
-            placeholder="Search in saved words..."
-            oninput="filterSavedWords()"
-          />
-          <span class="sw-search-icon">&#128269;</span>
+
+      <!-- ===== MAIN: SAVED WORDS ===== -->
+      <main class="saved-page" id="main-content">
+
+        <!-- Tiêu đề -->
+        <h1 class="saved-page__title">
+          <i class="ti ti-bookmark-filled" aria-hidden="true"></i>
+          Saved Words
+          <span class="saved-page__count" id="word-count"></span>
+        </h1>
+
+        <!-- Toolbar: lọc + sắp xếp + xóa tất cả -->
+        <div class="saved-toolbar">
+          <div class="saved-toolbar__search">
+            <i class="ti ti-search" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="filter-input"
+              placeholder="Filter saved words..."
+              autocomplete="off"
+              aria-label="Filter saved words"
+            />
+          </div>
+          <select class="saved-toolbar__sort" id="sort-select" aria-label="Sort by">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="az">A &#8594; Z</option>
+            <option value="za">Z &#8594; A</option>
+          </select>
+          <button class="btn--clear" id="clear-all-btn">
+            <i class="ti ti-trash" aria-hidden="true"></i>
+            Clear all
+          </button>
         </div>
- 
-        <!-- Thông báo trống -->
-        <div class="sw-empty-msg" id="swEmptyMsg">
-          No saved words yet. Search for a word and click the bookmark icon to save it!
+
+        <!-- Grid từ đã lưu — JS render vào đây -->
+        <div class="saved-grid" id="saved-grid" role="list" aria-label="Saved words list"></div>
+
+        <!-- Trạng thái rỗng -->
+        <div class="saved-empty" id="saved-empty" role="status" aria-live="polite">
+          <i class="ti ti-bookmarks-off" aria-hidden="true"></i>
+          <p class="saved-empty__title">No saved words yet</p>
+          <p>Tra t&#7915; v&agrave; nh&#7845;n <strong>Bookmark</strong> &#273;&#7875; l&#432;u l&#7841;i!</p>
+          <a href="index.html">&#8592; Tra t&#7915; ngay</a>
+          <!-- Nút reset demo: chỉ dùng khi dev/test, xóa đi khi release -->
+          <button onclick="resetSavedWords()" class="btn--reset-demo">
+            <i class="ti ti-refresh" aria-hidden="true"></i>
+            Load demo data
+          </button>
         </div>
- 
-        <!-- Danh sách từ đã lưu -->
-        <ul class="sw-list" id="swList"></ul>
- 
+
       </main>
- 
-      <!-- FOOTER -->
-      <footer class="bottom-bar">
-        <span class="bottom-copy">&#169;2026 Dictoney. All rights reserved. &middot; Info</span>
-        <div class="bottom-actions">
-          <button class="btn-small">&#8635; Refresh</button>
-          <button class="btn-small">&#8679; Share</button>
+
+      <!-- FOOTER — giữ nguyên từ index.html -->
+      <footer class="site-footer">
+        <div class="site-footer__legal">
+          <p>
+            <small>&copy; 2026 Dictionary. All rights reserved.</small>
+            <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+            <a href="#info">Info</a>
+          </p>
         </div>
+        <a href="https://github.com/downf21st/BTL_Javascript-01"
+          class="site-footer__github-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="ti ti-brand-github" aria-hidden="true"></i>
+          GitHub
+        </a>
       </footer>
- 
     </div>
   </div>
- 
-  <script src="saved-words.js"></script>
- 
+
+  <!-- Toast thông báo -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <!-- Modal xác nhận xóa tất cả -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal__icon"><i class="ti ti-trash" aria-hidden="true"></i></div>
+      <h3 id="modal-title">X&oacute;a t&#7845;t c&#7843; t&#7915; &#273;&atilde; l&#432;u?</h3>
+      <p>H&agrave;nh &#273;&#7897;ng n&agrave;y kh&ocirc;ng th&#7875; ho&agrave;n t&aacute;c. T&#7845;t c&#7843; <strong id="modal-count"></strong> t&#7915; s&#7869; b&#7883; x&oacute;a v&#297;nh vi&#7877;n.</p>
+      <div class="modal__actions">
+        <button class="modal__cancel" id="modal-cancel">H&#7911;y</button>
+        <button class="modal__confirm" id="modal-confirm">X&oacute;a t&#7845;t c&#7843;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/saved-words.js"></script>
 </body>
 </html>

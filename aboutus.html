@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Online Dictionary</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> 
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="icon" href="assets\Book.jpg" type="image/icon" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Menu">
+      <div class="sidebar__brand">
+        <a href="index.html" class="sidebar__logo">  
+          <i class="ti ti-book" aria-hidden="true"></i>          
+          <span>Online Dictionary</span>
+        </a>
+      </div>
+      <div class="sidebar__actions">
+        <a href="savewords.html" class="btn btn--outline btn--saved">
+          <i class="ti ti-bookmark" aria-hidden="true"></i>
+          <span>Saved Words</span>
+        </a>
+        <a href="flashcard.html" class="btn btn--outline">
+          <i class="ti ti-cards" aria-hidden="true"></i>
+          <span>Flash Card</span>
+        </a>
+      </div>
+      <nav class="sidebar__nav">
+        <h2 class="sidebar__nav-title">Languages</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">BRA - VI</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">VI - ENG</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link sidebar__nav-link--active">ENG - VI</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">SPA - VI</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">POR - VI</a></li>
+        </ul>
+      </nav>
+      <nav class="sidebar__nav sidebar__nav--secondary">
+        <h2 class="sidebar__nav-title">More information</h2>
+        <ul class="sidebar__nav-list" role="list">
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">FAQs</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">Make a donation</a></li>
+          <li class="sidebar__nav-item"><a href="" class="sidebar__nav-link">Careers</a></li>
+          <li class="sidebar__nav-item"><a href="aboutus.html" class="sidebar__nav-link">About us</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <header class="site-header">
+        <form class="site-header__search" role="search" action="#" method="get">
+          <input class="site-header__search-input" type="search" placeholder="Search for a word..." autocomplete="off" />
+          <button type="submit" class="site-header__search-btn">
+            <i class="ti ti-search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <div class="site-header__tools">
+          <div class="site-header__profile">
+            <div class="site-header__profile-text">
+              <p class="site-header__username">BTL_JS-01</p>
+              <p class="site-header__stats">downf.21st</p>
+            </div>
+            <img class="site-header__avatar" src="assets\avatar.jpg" width="40" height="40" alt="Avatar" />
+          </div>
+        </div>
+      </header>
+
+      <main class="entry" id="main-content">
+        <nav class="entry__history">
+          <button type="button" class="entry__history-btn"><i class="ti ti-chevron-left" aria-hidden="true"></i></button>
+          <button type="button" class="entry__history-btn"><i class="ti ti-chevron-right" aria-hidden="true"></i></button>
+        </nav>
+
+        <header class="entry__header">
+          <h1 class="entry__word" id="entry__word">About Us</h1>
+        </header>
+
+        <p class="entry__phonetic">
+          <span class="visually-hidden">Pronunciation:</span>
+           /əˈbaʊt ʌs/
+        </p>
+
+        <section class="entry__definition">
+          <p id="word-define">Về Chúng Tôi</p>
+        </section>
+
+        <section class="entry__section">
+          <h2 class="entry__section-title">Contributors</h2>
+          <ul class="entry__examples">
+            <li><strong>Nguyễn Đức Đông</strong> - B25DCCC277</li>
+            <li><strong>Nguyễn Hải Nam</strong> - B25DCCC151</li>
+            <li><strong>Nguyễn Anh Tú</strong> - B25DCCC259</li>
+            <li><strong>Vũ Đình Khánh Toàn</strong> - B25DCCC228</li>
+          </ul>
+        </section>
+
+        <footer class="entry__footer">
+          <button type="button" class="btn btn--primary">
+            <i class="ti ti-refresh" aria-hidden="true"></i>
+            <span>Refresh</span>
+          </button>
+          <button type="button" class="btn btn--ghost">
+            <i class="ti ti-share" aria-hidden="true"></i>
+            <span>Share</span>
+          </button>
+        </footer>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__legal">
+          <p><small>&copy; 2026 Dictionary. All rights reserved.</small></p>
+        </div>
+        <a href="https://github.com/downf21st/BTL_Javascript-01" class="site-footer__github-link" target="_blank">
+          <i class="ti ti-brand-github" aria-hidden="true"></i> GitHub
+        </a>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -10,9 +10,7 @@
   <link rel="stylesheet" href="css/searchQuery.css" />
   <link rel="icon" href="assets\Book.jpg" type="image/icon" />
 </head>
-
 <body>
-
   <div class="app-shell">
     <aside class="sidebar" aria-label="Menu principale">
       <div class="sidebar__brand">
@@ -40,12 +38,7 @@
             <a href="" class="sidebar__nav-link" hreflang="en">VI - ENG</a>
           </li>
           <li class="sidebar__nav-item">
-            <a
-              href=""
-              class="sidebar__nav-link sidebar__nav-link--active"
-              hreflang="it"
-              aria-current="page"
-            >ENG - VI</a>
+            <a href="" class="sidebar__nav-link sidebar__nav-link--active" hreflang="it" aria-current="page">ENG - VI</a>
           </li>
           <li class="sidebar__nav-item">
             <a href="" class="sidebar__nav-link" hreflang="es">SPA - VI</a>
@@ -77,31 +70,17 @@
       <header class="site-header">
         <form class="site-header__search" role="search" action="#" method="get">
           <label for="search-query" class="visually-hidden">Search</label>
-          <input
-            id="search-query"
-            class="site-header__search-input"
-            type="search"
-            name="q"
-            placeholder="Search for a word..."
-            autocomplete="off"
-          />
+          <input id="search-query" class="site-header__search-input" type="search" name="q" placeholder="Search for a word..." autocomplete="off"/>
           <button type="submit" class="site-header__search-btn" onclick="handleSearch()">
             <i class="ti ti-search" aria-hidden="true"></i>
           </button>
         </form>
         <div class="site-header__tools">
           <nav class="site-header__lang-nav">
-            <button
-              type="button"
-              class="site-header__lang-btn"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-              id="ui-lang-toggle"
-            >
+            <button type="button" class="site-header__lang-btn" aria-haspopup="listbox" aria-expanded="false" id="ui-lang-toggle">
               <span>Vietnamese (VN)</span>
               <i class="ti ti-chevron-down" aria-hidden="true"></i>
             </button>
-
             <ul class="site-header__lang-menu is-hidden" role="listbox">
               <li role="option"><button type="button">Vietnamese (VN)</button></li>
               <li role="option"><button type="button">English (EN)</button></li>
@@ -112,13 +91,7 @@
               <p class="site-header__username">BTL_JS-01</p>
               <p class="site-header__stats">downf.21st</p>
             </div>
-            <img
-              class="site-header__avatar"
-              src="assets\avatar.jpg"
-              width="40"
-              height="40"
-              alt="Avatar"
-            />
+            <img class="site-header__avatar" src="assets\avatar.jpg" width="40" height="40" alt="Avatar"/>
             <button type="button" class="site-header__menu-btn">
               <i class="ti ti-menu-2" aria-hidden="true"></i>
             </button>

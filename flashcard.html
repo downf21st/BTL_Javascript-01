@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Online dictionary — tra từ." />
-  <title>Online dictionary</title>
+  <title>Flashcard - Online dictionary</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> 
   <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/searchQuery.css" />
+  
+  <link rel="stylesheet" href="css/flashcard.css" />
+  
   <link rel="icon" href="assets\Book.jpg" type="image/icon" />
 </head>
 
-<body>
+<body class="flashcard-page">
 
   <div class="app-shell">
     <aside class="sidebar" aria-label="Menu principale">
       <div class="sidebar__brand">
-        <a href="" class="sidebar__logo" aria-label="Online dictionary — Home">  
+        <a href="index.html" class="sidebar__logo" aria-label="Online dictionary — Home">  
           <i class="ti ti-book" aria-hidden="true"></i>          
           <span>Online Dictionary</span></a>
       </div>
@@ -40,12 +42,7 @@
             <a href="" class="sidebar__nav-link" hreflang="en">VI - ENG</a>
           </li>
           <li class="sidebar__nav-item">
-            <a
-              href=""
-              class="sidebar__nav-link sidebar__nav-link--active"
-              hreflang="it"
-              aria-current="page"
-            >ENG - VI</a>
+            <a href="" class="sidebar__nav-link sidebar__nav-link--active" hreflang="it" aria-current="page">ENG - VI</a>
           </li>
           <li class="sidebar__nav-item">
             <a href="" class="sidebar__nav-link" hreflang="es">SPA - VI</a>
@@ -72,7 +69,8 @@
           </li>
         </ul>
       </nav>
-   </aside>
+    </aside>
+
     <div class="content">
       <header class="site-header">
         <form class="site-header__search" role="search" action="#" method="get">
@@ -85,23 +83,16 @@
             placeholder="Search for a word..."
             autocomplete="off"
           />
-          <button type="submit" class="site-header__search-btn" onclick="handleSearch()">
+          <button type="submit" class="site-header__search-btn">
             <i class="ti ti-search" aria-hidden="true"></i>
           </button>
         </form>
         <div class="site-header__tools">
           <nav class="site-header__lang-nav">
-            <button
-              type="button"
-              class="site-header__lang-btn"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-              id="ui-lang-toggle"
-            >
+            <button type="button" class="site-header__lang-btn" aria-haspopup="listbox" aria-expanded="false" id="ui-lang-toggle">
               <span>Vietnamese (VN)</span>
               <i class="ti ti-chevron-down" aria-hidden="true"></i>
             </button>
-
             <ul class="site-header__lang-menu is-hidden" role="listbox">
               <li role="option"><button type="button">Vietnamese (VN)</button></li>
               <li role="option"><button type="button">English (EN)</button></li>
@@ -112,85 +103,41 @@
               <p class="site-header__username">BTL_JS-01</p>
               <p class="site-header__stats">downf.21st</p>
             </div>
-            <img
-              class="site-header__avatar"
-              src="assets\avatar.jpg"
-              width="40"
-              height="40"
-              alt="Avatar"
-            />
+            <img class="site-header__avatar" src="assets\avatar.jpg" width="40" height="40" alt="Avatar" />
             <button type="button" class="site-header__menu-btn">
               <i class="ti ti-menu-2" aria-hidden="true"></i>
             </button>
           </div>
         </div>
       </header>
+
       <main class="entry" id="main-content">
-        <nav class="entry__history">
-          <button type="button" class="entry__history-btn" >
-            <i class="ti ti-chevron-left" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="entry__history-btn">
-            <i class="ti ti-chevron-right" aria-hidden="true"></i>
-          </button>
-        </nav>
-        <header class="entry__header">
-          <h1 class="entry__word" id="entry__word">Hello</h1>
-          <div class="entry__actions" role="group">
-            <button type="button" class="entry__icon-btn" aria-label="Copyboard">
-              <i class="ti ti-copy" aria-hidden="true"></i>
-              <span class="entry__icon-label">Copy</span>
-            </button>
-            <button type="button" class="entry__icon-btn" aria-label="Bookmark">
-              <i class="ti ti-bookmark"></i>
-              <span class="entry__icon-label">Bookmark</span>
-            </button>
+        
+        <div class="flashcard-container">
+          <h1>Thẻ Ghi Nhớ Từ Vựng</h1>
+          
+          <div class="flashcard">
+            <div class="card-inner"> 
+              <div class="card-face card-front">
+                <h2 class="word" id="flashcard-word">Hello</h2>
+                <p class="pronunciation" id="flashcard-pron">/heˈləʊ/</p>
+                <p class="hint">(Bấm vào thẻ để xem nghĩa)</p>
+              </div>
+              <div class="card-face card-back">
+                <p class="meaning" id="flashcard-meaning">Xin chào, biểu lộ sự ngạc nhiên</p>
+              </div>
+            </div>
           </div>
-        </header>
-        <p class="entry__phonetic">
-          <span class="visually-hidden">Pronuncia:</span>
-           /heˈləʊ/
-        </p>
-        <section class="entry__definition" aria-labelledby="def-title">
-          <h2 id="def-title" class="visually-hidden">Define</h2>
-          <p id="word-define">
-            Xin chào, biểu lộ sự ngạc nhiên
-          </p>
-        </section>
-        <section class="entry__section" aria-labelledby="examples-title">
-          <h2 id="examples-title" class="entry__section-title">Examples</h2>
-          <ul class="entry__examples">
-            <li>
-              <strong>Hello</strong>! How are you doing today?
-            </li>
-            <li>
-              She said <strong>hello</strong> to everyone at the party.
-            </li>
-            <li>
-              <strong>Hello</strong>, nice to meet you!
-            </li>
-          </ul>
-        </section>
-        <section class="entry__section" aria-labelledby="synonyms-title">
-          <h2 id="synonyms-title" class="entry__section-title">Synonyms</h2>
-          <ul class="entry__synonyms" role="list">
-            <li><a href="" class="tag"></a></li>
-            <li><a href="" class="tag"></a></li>
-            <li><a href="" class="tag"></a></li>
-            <li><a href="" class="tag"></a></li>
-          </ul>
-        </section>
-        <footer class="entry__footer">
-          <button type="button" class="btn btn--primary">
-            <i class="ti ti-refresh" aria-hidden="true"></i>
-            <span>Refresh</span>
-          </button>
-          <button type="button" class="btn btn--ghost">
-            <i class="ti ti-share" aria-hidden="true"></i>
-            <span>Share</span>
-          </button>
-        </footer>
+
+          <div class="navigation">
+            <button id="prev-btn" disabled>← Trước</button>
+            <span id="card-progress">1 / 5</span>
+            <button id="next-btn">Sau →</button>
+          </div>
+        </div>
+
       </main>
+
       <footer class="site-footer">
         <div class="site-footer__legal">
           <p>
@@ -204,8 +151,10 @@
           GitHub
         </a>
       </footer>
+
     </div>
   </div>
-<script src="js/index.js"></script>
+
+  <script src="js/flashcard.js"></script>
 </body>
 </html>

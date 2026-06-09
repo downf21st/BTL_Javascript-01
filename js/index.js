@@ -44,19 +44,23 @@ function getSavedWords() {
 }
 
 function isBookmarked(word) {
-  return getSavedWords().includes(word);
+  const saved = getSavedWords();
+  return saved.some(item => item.eng === word);
 }
 
-function toggleBookmark(word) {
+function toggleBookmark(wordData) {
   const saved = getSavedWords();
-  const idx   = saved.indexOf(word);
+  const idx   = saved.findIndex(item => item.eng === wordData.eng);
   if (idx === -1) {
-    saved.push(word);
+    // Thêm savedAt khi lưu từ
+    const dataToSave = Object.assign({}, wordData, { savedAt: Date.now() });
+    saved.push(dataToSave);
   } else {
     saved.splice(idx, 1);
   }
   localStorage.setItem('savedWords', JSON.stringify(saved));
-  updateBookmarkBtn(word);
+   window.dispatchEvent(new Event('savedWordsChanged'));
+  updateBookmarkBtn(wordData.eng);
 }
 
 function updateBookmarkBtn(word) {
@@ -75,21 +79,46 @@ if (bookmarkBtn) {
   bookmarkBtn.addEventListener('click', () => {
     const word = wordEl.textContent.trim();
     if (!word || word === 'Không tìm thấy') return;
-    toggleBookmark(word);
+
+    const currentData = navHistory[historyIndex];
+    if (!currentData) return;
+    
+    const result = currentData.results?.[0];
+    const pronunciations = result?.pronunciations ?? [];
+    const meanings = result?.meanings ?? [];
+    
+    const wordData = {
+      eng: currentData.word,
+      ipa: pronunciations.length > 0 ? pronunciations[0].ipa : '',
+      vie: meanings.length > 0 ? meanings[0].definition : 'Chưa có định nghĩa'
+    };
+    
+    toggleBookmark(wordData);
   });
 }
 
 if (copyBtn) {
+  const label = copyBtn.querySelector('.entry__icon-label');
+  const originalText = label ? label.textContent : '';
+
+  let timeoutId;
+
   copyBtn.addEventListener('click', () => {
     const word = wordEl.textContent.trim();
+    
     navigator.clipboard.writeText(word).then(() => {
-      const label = copyBtn.querySelector('.entry__icon-label');
-      const original = label.textContent;
-      label.textContent = 'Đã copy!';
-      setTimeout(() => { label.textContent = original; }, 1500);
+      if (label) {
+        label.textContent = 'Đã copy!';
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => { 
+          label.textContent = originalText; 
+        }, 1500);
+      }
+    }).catch(err => {
+      console.error('Lỗi khi copy: ', err);
     });
   });
-} 
+}
 async function fetchWord(word) {
   const url = `https://dict.minhqnd.com/api/v1/lookup?word=${encodeURIComponent(word)}`;
   try {
@@ -159,7 +188,6 @@ function renderEntry(data) {
     meanings.forEach(m => {
       if (!m.example) return;
       const li = document.createElement('li');
-      // In đậm từ chính trong câu ví dụ
       const highlighted = m.example.replace(
         new RegExp(`(${escapeRegex(data.word)})`, 'gi'),
         '<strong>$1</strong>'
@@ -224,7 +252,6 @@ async function handleSearch() {
   const data = await fetchWord(word);
 
   if (data?.exists) {
-    // Xoá forward stack khi tìm mới
     navHistory   = navHistory.slice(0, historyIndex + 1);
     navHistory.push(data);
     historyIndex = navHistory.length - 1;
@@ -257,6 +284,23 @@ if (refreshBtn) {
     if (current) renderEntry(current);
   });
 }
+
+function checkAndLoadLookupWord() {
+  const lookupData = sessionStorage.getItem('lookupWordData');
+  if (lookupData) {
+    try {
+      const wordData = JSON.parse(lookupData);
+      searchInput.value = wordData.eng;
+      handleSearch();
+     sessionStorage.removeItem('lookupWordData');
+    } catch (e) {
+      console.error('Lỗi khi parse lookup data:', e);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', checkAndLoadLookupWord);
+checkAndLoadLookupWord();
 
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

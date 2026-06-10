@@ -138,7 +138,7 @@ body {
   flex-direction: column;  
   gap: 8px;                
 }
-/* Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -548,7 +548,7 @@ body {
   }
 }
   
-/* ── Meanings ────────────────────────────────────────────────── */
+
 .meaning-item {
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
@@ -594,7 +594,7 @@ body {
   border-left: 2px solid var(--border);
 }
 
-/* ── Phonetic regions ────────────────────────────────────────── */
+
 .phonetic__region {
   font-size: 11px;
   font-style: normal;

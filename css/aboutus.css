@@ -1,4 +1,4 @@
-/* Bao ngoài để căn giữa khối About Us */
+
 .about-wrapper {
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
     background: #ffffff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Viền mờ cho giống ảnh của nhóm trưởng */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
     border: 1px solid #eaeaea;
     text-align: center;
     width: 450px;

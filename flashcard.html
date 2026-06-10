@@ -7,14 +7,10 @@
   <title>Flashcard - Online dictionary</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> 
   <link rel="stylesheet" href="css/index.css" />
-  
   <link rel="stylesheet" href="css/flashcard.css" />
-  
   <link rel="icon" href="assets\Book.jpg" type="image/icon" />
 </head>
-
 <body class="flashcard-page">
-
   <div class="app-shell">
     <aside class="sidebar" aria-label="Menu principale">
       <div class="sidebar__brand">
@@ -70,19 +66,11 @@
         </ul>
       </nav>
     </aside>
-
     <div class="content">
       <header class="site-header">
         <form class="site-header__search" role="search" action="#" method="get">
           <label for="search-query" class="visually-hidden">Search</label>
-          <input
-            id="search-query"
-            class="site-header__search-input"
-            type="search"
-            name="q"
-            placeholder="Search for a word..."
-            autocomplete="off"
-          />
+          <input id="search-query" class="site-header__search-input" type="search" name="q" placeholder="Search for a word..." autocomplete="off"/>
           <button type="submit" class="site-header__search-btn">
             <i class="ti ti-search"></i>
           </button>
@@ -110,12 +98,9 @@
           </div>
         </div>
       </header>
-
       <main class="entry" id="main-content">
-        
         <div class="flashcard-container">
           <h1>Thẻ Ghi Nhớ Từ Vựng</h1>
-          
           <div class="flashcard">
             <div class="card-inner"> 
               <div class="card-face card-front">
@@ -128,16 +113,13 @@
               </div>
             </div>
           </div>
-
           <div class="navigation">
             <button id="prev-btn" disabled>← Trước</button>
             <span id="card-progress">1 / 5</span>
             <button id="next-btn">Sau →</button>
           </div>
         </div>
-
       </main>
-
       <footer class="site-footer">
         <div class="site-footer__legal">
           <p>
@@ -151,10 +133,8 @@
           GitHub
         </a>
       </footer>
-
     </div>
   </div>
-
   <script src="js/flashcard.js"></script>
 </body>
 </html>

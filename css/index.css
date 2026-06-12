@@ -36,6 +36,10 @@ body {
   min-height: 100dvh;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 .is-hidden {
   display: none !important;
 }

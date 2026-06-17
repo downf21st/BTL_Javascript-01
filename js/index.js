@@ -52,8 +52,7 @@ function toggleBookmark(wordData) {
   const saved = getSavedWords();
   const idx   = saved.findIndex(item => item.eng === wordData.eng);
   if (idx === -1) {
-    // Thêm savedAt khi lưu từ
-    const dataToSave = Object.assign({}, wordData, { savedAt: Date.now() });
+    const dataToSave = { ...wordData, savedAt: Date.now() };
     saved.push(dataToSave);
   } else {
     saved.splice(idx, 1);

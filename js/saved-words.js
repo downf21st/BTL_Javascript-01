@@ -140,10 +140,10 @@ filterInput.addEventListener('input', render);
 sortSelect.addEventListener('change', render);
 clearAllBtn.addEventListener('click', function () {
   if (words.length === 0) {
-    showToast('Danh s\u00E1ch \u0111\u00E3 tr\u1ED1ng!');
+    showToast('Danh sách đã trống!');
     return;
   }
-  modalCount.textContent = words.length + ' t\u1EEB';
+  modalCount.textContent = words.length + ' từ vựng';
   modalOverlay.classList.add('show');
   modalConfirm.focus();
 });
@@ -158,7 +158,7 @@ modalConfirm.addEventListener('click', function () {
   saveWords(words);
   modalOverlay.classList.remove('show');
   render();
-  showToast('\u0110\u00E3 x\u00F3a t\u1EA5t c\u1EA3 t\u1EEB \u0111\u00E3 l\u01B0u');
+  showToast('Đã xóa tất cả từ vựng');
 });
 
 modalOverlay.addEventListener('click', function (e) {
